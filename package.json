@@ -1,7 +1,15 @@
 {
   "name": "invertecor",
+  "displayName": "InverteCor",
+  "license": "MIT",
   "version": "0.1.0",
   "private": true,
+  "author": "Charles Jamil",
+  "repository": {
+    "type": "Git",
+    "url": "https://github.com/tchars/seletor-de-cor-de-roupas-virada-2021"
+  },
+  "description": "SPA em React que sugere cor de roupa baseada na cor de roupa utilizada na virada de 2019",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
