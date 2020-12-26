@@ -7,7 +7,7 @@ const Sugestor = () => {
   const corEscolhida = useRef();
 
   function executeScroll() {
-    corEscolhida.current.scrollIntoView();
+    corEscolhida.current.scrollIntoView({ behavior: 'smooth' });
   }
 
   useEffect(() => {

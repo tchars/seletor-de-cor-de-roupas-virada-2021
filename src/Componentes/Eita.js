@@ -7,7 +7,7 @@ const Eita = () => {
   const corEita = useRef();
 
   function executeScroll() {
-    corEita.current.scrollIntoView();
+    corEita.current.scrollIntoView({ behavior: 'smooth' });
   }
 
   useEffect(() => {
