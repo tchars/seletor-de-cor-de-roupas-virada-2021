@@ -4,9 +4,9 @@ Este projeto tem intuito satírico e sem qualquer relação com a realidade.
 
 # Como funciona?
 
-O ano de 2020 foi bastante ruim para a maioria do país, portanto, para deixar de lado a tristeza e rir um pouco, resolvi criar uma SPA para que você possa escolher sua cor de roupa para passar o ano!
+O ano de 2020 foi bastante ruim para a maioria, portanto, para deixar de lado a tristeza e rir um pouco, resolvi criar uma SPA para que você possa escolher sua cor de roupa para passar o ano!
 
-(PS: Como o ano foi ruim, a cor sempre será o inverso haha)
+(PS: A cor sempre será o inverso haha)
 
 # Quais tecnologias?
 
@@ -15,8 +15,8 @@ O ano de 2020 foi bastante ruim para a maioria do país, portanto, para deixar d
 
 # Créditos
 
-- Charles Jamil
-- tchars.com/escolher-roupa-2021
+- [Charles Jamil](https://tchars.com/)
+- [Link do app](https://tchars.com/projetos/sugestor-virada-2021/)
 
 # Licença
 

@@ -1,46 +1,61 @@
-import React from 'react';
-import { Col, Container, Jumbotron, Nav, Row } from 'react-bootstrap';
+import React, { useContext } from 'react';
+import { Col, Container, Form, Jumbotron, Row } from 'react-bootstrap';
+
+import Compartilhar from './Componentes/Compartilhar';
+import Eita from './Componentes/Eita';
+import LinksUteis from './Componentes/LinksUteis';
 import SeletorDeCores from './Componentes/SeletorDeCores';
 import Sugestor from './Componentes/Sugestor';
 import Titulo from './Componentes/Titulo';
 
+import { AppContext } from './Contexts/AppContext';
+
 function App() {
+  const { corDaRoupaEsquecida, setCorDaRoupaEsquecida } = useContext(
+    AppContext,
+  );
+
+  const capturaEsquecimentoCorDaRoupa = () => {
+    setCorDaRoupaEsquecida(!corDaRoupaEsquecida);
+  };
+
   return (
     <>
-      <Jumbotron fluid>
-        <h1 className="display-4 text-center">2021 Dress-Color Generator</h1>
+      <Jumbotron fluid className={'text-center'}>
+        <h1 className="display-4">2021 Dress-Color Generator</h1>
+        <p class="lead">
+          Descubra qual cor de roupa usar baseado na sua cor de roupa na virada
+          de 2019
+        </p>
       </Jumbotron>
 
       <Container>
         <Row className="justify-content-center pb-2">
           <Col sm={12} md={6} className="pb-5">
-            <Titulo texto={'Escolha a cor que USOU'} />
+            <Titulo texto="Escolha a cor que USOU" />
             <SeletorDeCores />
+            <Form.Check
+              type="checkbox"
+              id="customControlAutosizing"
+              label="Não me lembro"
+              onChange={capturaEsquecimentoCorDaRoupa}
+              custom
+            />
           </Col>
 
           <Col sm={12} md={6}>
-            <Titulo texto={'Cor sugerida para virada 2021'} />
-            <Sugestor />
+            <Titulo
+              texto={corDaRoupaEsquecida ? '' : 'Cor sugerida para virada 2021'}
+            />
+            {corDaRoupaEsquecida ? <Eita /> : <Sugestor />}
           </Col>
         </Row>
+
         <Row>
           <Col sm={12} className="pb-2 text-center">
-            <p>Desenvolvido com ❤ por Charles Jamil</p>
-            <Nav className="justify-content-center">
-              <Nav.Item>
-                <Nav.Link href="https://tchars.com/blog">Início</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link disabled href="https://tchars.com">
-                  Tutorial
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href="https://github.com/tchars/seletor-de-cor-de-roupas-virada-2021">
-                  GitHub
-                </Nav.Link>
-              </Nav.Item>
-            </Nav>
+            <LinksUteis className="pb-2" />
+            <p className="pb-2">Desenvolvido com ❤ por Charles Jamil</p>
+            <Compartilhar />
           </Col>
         </Row>
       </Container>

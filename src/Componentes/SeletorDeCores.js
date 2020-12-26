@@ -27,6 +27,7 @@ const SeletorDeCores = () => {
       onChangeComplete={capturaTrocaDeCor}
       width="100%"
       colors={cores}
+      className="mb-2"
     />
   );
 };

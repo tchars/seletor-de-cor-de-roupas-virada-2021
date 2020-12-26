@@ -16,11 +16,15 @@ export const AppProvider = ({ children }) => {
     b: 0,
   });
 
+  const [corDaRoupaEsquecida, setCorDaRoupaEsquecida] = useState(false);
+
   const context = {
     coresVestimentaSuperior,
     setCoresVestimentaSuperior,
     coresVestimentaInferior,
     setCoresVestimentaInferior,
+    corDaRoupaEsquecida,
+    setCorDaRoupaEsquecida,
   };
 
   return <Provider value={context}>{children}</Provider>;
