@@ -23,7 +23,7 @@ function App() {
     <>
       <Jumbotron fluid className={'text-center'}>
         <h1 className="display-4">2021 Dress-Color Generator</h1>
-        <p class="lead">
+        <p className="lead">
           Descubra qual cor de roupa usar baseado na sua cor de roupa na virada
           de 2019
         </p>
@@ -34,6 +34,7 @@ function App() {
           <Col sm={12} md={6} className="pb-5">
             <Titulo texto="Escolha a cor que USOU" />
             <SeletorDeCores />
+
             <Form.Check
               type="checkbox"
               id="customControlAutosizing"
@@ -53,8 +54,8 @@ function App() {
 
         <Row>
           <Col sm={12} className="pb-2 text-center">
+            <p>Desenvolvido com ❤ por Charles Jamil</p>
             <LinksUteis className="pb-2" />
-            <p className="pb-2">Desenvolvido com ❤ por Charles Jamil</p>
             <Compartilhar />
           </Col>
         </Row>

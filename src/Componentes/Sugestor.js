@@ -1,8 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { AppContext } from '../Contexts/AppContext';
 
 const Sugestor = () => {
   const { coresVestimentaInferior } = useContext(AppContext);
+
+  const corEscolhida = useRef();
+
+  function executeScroll() {
+    corEscolhida.current.scrollIntoView();
+  }
+
+  useEffect(() => {
+    executeScroll();
+  }, [coresVestimentaInferior]);
 
   return (
     <div>
@@ -14,6 +24,7 @@ const Sugestor = () => {
           borderRadius: '15px',
         }}
         className="mb-3 shadow-lg"
+        ref={corEscolhida}
       ></div>
       <h3 className="text-center">{`rgb(${coresVestimentaInferior.r}, ${coresVestimentaInferior.g}, ${coresVestimentaInferior.b})`}</h3>
     </div>
