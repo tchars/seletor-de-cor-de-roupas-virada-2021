@@ -24,8 +24,8 @@ function App() {
       <Jumbotron fluid className={'text-center'}>
         <h1 className="display-4">2021 Dress-Color Generator</h1>
         <p className="lead">
-          Descubra qual cor de roupa usar baseado na sua cor de roupa na virada
-          de 2019
+          Descubra qual cor de roupa usar na virada 2020 baseado na cor de roupa
+          usada em 2019
         </p>
       </Jumbotron>
 
